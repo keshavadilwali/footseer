@@ -49,4 +49,6 @@ The decision trees obtained ranged from 1 to 3 levels of depth, where the Goal D
 <h2> Improving Model Performance </h2>
 We note that the accuracies of our models are not ideal, which might suggest that more parameters should be added to the models. Such parameters could be metrics for team performance, metrics for player performance at a given position (striker, midfielder, defender), weather conditions etc. Other classification techniques such as Naïve Bayes or Random Forest can also be explored.
 
-Project by - Keshava Dilwali, Yingqiu Lee, Srijan Kumar, Claudio Flores (Columbia University)
+
+<h2> Project Team </h2>
+Keshava Dilwali, Yingqiu Lee, Srijan Kumar, Claudio Flores (Columbia University)
