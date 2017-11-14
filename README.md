@@ -1,4 +1,4 @@
-# FootSeer - Real-Time Soccer Match Prediction Using Machine Learning Algorithms
+# FootSeer: Real-Time Soccer Match Prediction Using Machine Learning Algorithms
 
 <h2> Goal </h2>
 The goal of our project was to create models that can predict the outcome of a soccer match. The three possible outcomes are home team wins, away team wins, or draw. Using our models, we created a web application that would allow a user to input real time parameters and the relevant time, and receive a predicted outcome.
