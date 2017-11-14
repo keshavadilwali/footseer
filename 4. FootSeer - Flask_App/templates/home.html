@@ -1,0 +1,21 @@
+{% extends "mainpage.html" %}
+{% block content %}
+<div class="quote">
+  <p>"I don't believe in fate. I just</p>
+  <p>learn from esoteric data."</p>
+  <p><i>- FootSeer</i></p>
+</div>
+<div class="imgcontainer">
+        <img src="{{ url_for('static',filename='footseer_bnw_t.png') }}" width= 250px; height= 350px;>
+        <br>
+        <br>
+</div>
+  {% if session.data_loaded %}
+          <div class="link">
+                <a href="/input">Ask FootSeer</a><br>
+          </div>
+  {% else %}
+    <div class="app-error"> Oops! Data wasn't loaded properly</div>
+  {% endif %}
+</div>
+{% endblock %}

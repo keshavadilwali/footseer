@@ -1,0 +1,54 @@
+{% extends "mainpage.html" %}
+{% block content %}
+<div class="leftpanel">
+        <iframe src="//giphy.com/embed/l3fQ8uksuffn4wPvi" width="430" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <p>FootSeer is a tool designed for statistical football (soccer) prediction. It analyzes historical football leage data and various game metrics to determine likely outcomes through different predictive analytics techniques.</p>
+        <p>The user can enter specific game parameters, and FootSeer will predict the game outcome using each of the following analytical models:</p>
+        <p><u>Multinomial Logistic Regression</u>- Calculates probability of win,lose or draw based on selected covariates. A LASSO was used to reduce the weights of each covariate so that the model is as simple as possible.</p>
+        <p><u>K-Nearest Neighbors</u>- Groups together records into a class based on closeness of its predictors to the class predictors.</p>
+        <p><u>Decision Tree Model</u>- Splits population of data into smaller and simpler branches to make better decisions.</p>
+</div>
+<div class="dropdown">
+<form action = "#" method = post>
+{{ form.scoreTime.label}}<br>
+ 	{{ form.scoreTime }}
+ 	<br>
+{{ form.homeTeam.label}}<br>
+ 	{{ form.homeTeam }}
+ 	<br>
+{{ form.awayTeam.label}}<br>
+ 	{{ form.awayTeam }}
+ 	<br>
+{{ form.homeScore.label}}<br>
+ 	{{ form.homeScore }}
+ 	<br>
+{{ form.awayScore.label}}<br>
+ 	{{ form.awayScore }}
+ 	<br>
+{{ form.homeYC.label}}<br>
+ 	{{ form.homeYC }}
+ 	<br>
+{{ form.awayYC.label}}<br>
+ 	{{ form.awayYC }}
+ 	<br>
+{{ form.homeRC.label}}<br>
+ 	{{ form.homeRC }}
+ 	<br>
+{{ form.awayRC.label}}<br>
+ 	{{ form.awayRC }}
+ 	<br>
+{{ form.homeSubs.label}}<br>
+ 	{{ form.homeSubs }}
+ 	<br>
+{{ form.awaySubs.label}}<br>
+ 	{{ form.awaySubs }}
+ 	<br>
+{{ form.model_type.label}}<br>
+        {{ form.model_type }}
+        <br>
+{{ form.hidden_tag() }}
+        <br>
+<input type='Submit'/>
+</form>
+</div>
+{% endblock %}

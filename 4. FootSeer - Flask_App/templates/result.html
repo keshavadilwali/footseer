@@ -1,0 +1,57 @@
+{% extends "mainpage.html" %}
+{% block content %}
+	{% if mod_type == 'Logistic_Regression' %}
+	<div class="logregresult">
+		<h2><u>Logistic Regression</u></h2>
+		{% if mod_out1 == 2 %}
+		<h3>Match will end in a DRAW with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% elif mod_out1 == 1 %}
+		<h3>{{ homeTeam }} will WIN with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% else %}
+		<h3>{{ awayTeam }} will WIN with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% endif %}
+		<img src="{{ url_for('static',filename=mod_out3) }}" width="600px" height="380px">
+		<br>
+		<h3>Logistic Regression Model Accuracy:</h3>
+		<img src="{{ url_for('static',filename='logit_accuracy.png') }}" width="600px" height="380px">
+		<p>This graph shows the accuracy of each model. e.g. the 5 minute model has an accuracy of 52% on the test data, while the 85 minute model has an accuracy of about 88% on the test data.</p>
+	</div>
+	{% elif mod_type == 'Decision_Trees' %}
+	<div class="drresult">
+		<h2><u>Decision Tree Model</u></h2>
+		{% if mod_out1 == 2 %}
+		<h3>Match will end in a DRAW with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% elif mod_out1 == 1 %}
+		<h3>{{ homeTeam }} will WIN with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% else %}
+		<h3>{{ awayTeam }} will WIN with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% endif %}
+		<img src="{{ url_for('static',filename=mod_out3) }}" width="600px" height="380px">
+		<br>
+		<h3>Decision Tree Model Accuracy:</h3>
+		<img src="{{ url_for('static',filename='tree_accuracy.png') }}" width="600px" height="380px">
+		<p>This graph shows the accuracy of each model. e.g. the 5 minute model has an accuracy of 49% on the test data, while the 85 minute model has an accuracy of about 90% on the test data.</p>
+	</div>
+	{% else %}
+	<div class="knnresult">
+		<h2><u>K-Nearest Neighbors</u></h2>
+		{% if mod_out1 == 2 %}
+		<h3>Match will end in a DRAW with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% elif mod_out1 == 1 %}
+		<h3>{{ homeTeam }} will WIN with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% else %}
+		<h3>{{ awayTeam }} will WIN with probability {{ mod_out2 }}% based on parameters entered at {{ userTime }} mins</h3>
+		{% endif %}
+		{{ mod_out3 | safe }}
+		<br>
+		<h3>K-Nearest Neighbors Model Accuracy:</h3>
+		<img src="{{ url_for('static',filename='knn_accuracy.png') }}" width="600px" height="380px">
+		<p>This graph shows the accuracy of each model. e.g. the 5 minute model has an accuracy of 50% on the test data, while the 85 minute model has an accuracy of about 90% on the test data.</p>
+	</div>
+	{% endif %}
+	<br>
+	<br>
+	<div class="back">
+		<a href = "/">Back</a>
+	</div>
+{% endblock %}

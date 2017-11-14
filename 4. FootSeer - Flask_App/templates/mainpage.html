@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>FootSeer</title>
+        <style>
+        body                    { background: url("static/background.jpg"); background-size: cover; background-attachment: fixed; font-family: "Helvetica Neue"; padding: 1em; }
+        .header                 { color: white; font-family: 'Helvetica Neue' ; font-size: 25px; font-weight: bold; letter-spacing: 2px; line-height: 1; text-align: center; padding-right: 2em; }
+        .page                   { margin: 2em; overflow: hidden; color: white; font-weight: lighter; letter-spacing: 0.5px}
+        .page .quote            { position: absolute; top: 22%; left: 10%; width: 25%; height: 30%; font-family: "Trebuchet MS"; font-size: 22px; color: white; }
+        .page .imgcontainer     { display: block; text-align: center; padding-top: 2em; padding-right: 3em; }
+        .page .link             { text-align: center; position: absolute; bottom: 25%; right: 15%; background-color: white; border:1px solid #241d13; border-width: 0.0001em; display:inline-block; cursor:pointer; font-family:"Trebuchet MS"; font-size:20px; font-weight:bold; padding:15px 30px; text-decoration:none; color: white;}
+        .page .leftpanel        { float: left; width: 40%; font-size: 15px; overflow: hidden; }
+        .page .dropdown         { margin-left: 42%; border-left: 1px solid white; padding: 1em; line-height: 1.3; }
+        .page .logregresult     { margin: auto; overflow: hidden; }
+        .page .knnresult        { margin: auto; overflow: hidden; }
+        .page .drresult         { margin: auto; overflow: hidden; }
+        .page .back             { text-align: right; background-color: white; border:1px solid #241d13; border-width: 0.0001em; display:inline-block; cursor:pointer; font-family:"Trebuchet MS"; font-size:20px; font-weight:bold; padding:15px 30px; text-decoration:none; color: white; }
+        .footer                 { color: white; clear: both;text-align: center; padding-right: 3em; }
+        </style>
+</head>
+<body>
+        <div class="header">
+                <h1>FootSeer</h1>
+        </div>
+        <div class="page">
+                {% block content %}{% endblock %}
+        </div>
+        <div class="footer">
+        <span>All rights reserved</span>
+        </div>
+</body> 
+</html>
